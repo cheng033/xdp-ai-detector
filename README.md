@@ -3,8 +3,6 @@
 一個以 eBPF/XDP 實作的即時流量監測結合AI異常偵測
 
 
-
-
 ## 快速開始
 
 1. **建置 Docker 映像檔**
@@ -22,11 +20,10 @@
         xdp-anomaly-detector:latest -i enp0s3
     ```
 
-## 測試:  使用另一台主機製造 TCP flood 應該會跳出 Anomaly
-    ```bash
-    sudo hping3 -S < enp0s3 ip > -p 80 --flood
-    ```
-
+3. **測試:  使用另一台主機製造 TCP flood 應該會跳出 Anomaly**
+   ```bash
+   sudo hping3 -S <enp0s3 ip> -p 80 --flood
+   ```
 
 
 
